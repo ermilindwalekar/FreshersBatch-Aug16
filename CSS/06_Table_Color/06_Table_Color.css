@@ -1,0 +1,11 @@
+table{
+	border: 1px solid #4CAF50;
+}
+th{
+	background-color: #4CAF50;
+}
+td{
+	color: black;
+    border: 1px solid #4CAF50;
+
+}

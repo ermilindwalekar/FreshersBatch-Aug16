@@ -1,0 +1,12 @@
+#root{
+	background-color:#008B8B;
+}
+#root h1{
+	 font-weight: bold;
+}
+#root h2{
+	text-decoration: line-through;	
+}
+#root h3{
+	text-decoration: underline;
+}
