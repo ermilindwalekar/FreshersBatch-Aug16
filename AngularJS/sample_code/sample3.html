@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/angular.min.js"></script>
+<script>
+var custModule = angular.module('cust-module', []);
+function CustomerController($scope) {
+	$scope.customers = [
+	          		{fname: 'Tom', lname: 'Cruise'}, {fname: 'Jerry', lname: 'Bush'}, {fname: 'Ivan', lname: 'Eric'}, {fname: 'Barack', lname: 'Obama'}
+	          		];
+}
+var controllers = [];
+controllers.CustomerController = CustomerController;
+custModule.controller(controllers);
+
+</script>
+</head>
+<body ng-app='cust-module'>
+
+<div ng-controller="CustomerController">
+
+<input type="text" ng-model="firstname">
+<br><br>
+{{ firstname }}
+<br><br>
+<h3>
+<span ng-repeat="customer in customers | filter:firstname | orderBy: 'lname'">
+	{{ customer.fname | uppercase }} - {{ customer.lname | lowercase }}
+	<br>
+</span>
+</h3>
+</div>
+
+</body>
+</html>

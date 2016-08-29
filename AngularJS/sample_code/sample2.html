@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="js/angular.min.js"></script>
+</head>
+<body ng-app>
+
+<div ng-init="fruits = ['Peach', 'BlueBerry', 'Apple', 'Pomegranate']">
+
+<input type="text" ng-model="fname">
+<br><br>
+{{ fname }}
+<br><br>
+<h3>
+<span ng-repeat="fruit in fruits">
+	{{ fruit }}
+	<br>
+</span>
+</h3>
+</div>
+
+</body>
+</html>

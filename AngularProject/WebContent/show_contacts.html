@@ -1,0 +1,12 @@
+<ul ng-repeat="contact in contacts">
+	<li>{{ contact.name }} - {{ contact.phone }}</li>
+</ul>
+
+<br><br>
+<input type="text" ng-model="uname"><br>
+<input type="text" ng-model="phone"><br><br>
+<input type="button" value="Add contact" 
+	ng-click="add_contact()">
+	
+<br><br>
+<a href="#/exitPage">Exit</a>
